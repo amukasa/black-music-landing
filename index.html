@@ -6,47 +6,146 @@
   <title>Black Music App</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: #0d0d0d; color: #fff; }
-    header { background: linear-gradient(135deg, #000, #1a1a1a); padding: 2rem; text-align: center; }
-    header h1 { font-size: 2.5rem; margin: 0; }
-    header p { margin-top: .5rem; font-size: 1.2rem; color: #ccc; }
-    .btn { display: inline-block; margin-top: 1.5rem; padding: 0.8rem 1.5rem; background: #ff6600; color: #fff; font-weight: 600; text-decoration: none; border-radius: 30px; transition: background 0.3s; }
-    .btn:hover { background: #e65c00; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 3rem; background: #1a1a1a; }
-    .feature { background: #262626; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
-    .feature h3 { margin-top: 0; color: #ff6600; }
-    .screenshots { padding: 3rem; text-align: center; background: #0d0d0d; }
-    .screenshots h2 { font-size: 2rem; margin-bottom: 1.5rem; color: #ff6600; }
-    .device-section { margin-bottom: 2.5rem; }
-    .device-section h3 { margin-bottom: 1rem; color: #fff; }
-    .device-images { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
-    .device-images img { border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-    footer { text-align: center; padding: 2rem; background: #000; color: #888; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #ff6600;
+    }
+    header p {
+      max-width: 700px;
+      margin: 1rem auto;
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 1.8rem;
+      background: #ff6600;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #e65c00;
+    }
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    section h2 {
+      color: #ff6600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .description {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #ddd;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .feature {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .feature h3 {
+      color: #ff6600;
+      margin-top: 0;
+    }
+    .feature p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+    .screenshots {
+      background: #141414;
+    }
+    .device-section {
+      margin-bottom: 2.5rem;
+    }
+    .device-section h3 {
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .device-images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .device-images img {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      color: #888;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Black Music</h1>
     <p>Celebrate the legacy, diversity, and global impact of Black music.</p>
     <a href="https://apps.apple.com/us/app/black-music/id6636492722" class="btn">Download on App Store</a>
   </header>
 
-  <section class="features">
-    <div class="feature">
-      <h3>🎵 Rich Heritage</h3>
-      <p>Explore the deep roots of Black music across Africa, the Caribbean, and the world.</p>
+  <section>
+    <div class="description">
+      <p><strong>Black Music</strong> is your dedicated platform to explore and honor the rich cultural heritage, vibrant sounds, and profound influence of Black music worldwide. From the heartbeats of Africa to the dynamic rhythms of the Caribbean, immerse yourself in the stories, creativity, and trailblazing artists who have shaped generations.</p>
+      <p>Discover the deep roots and powerful narratives behind the music that continues to inspire and move the world. Whether you’re a fan, student, or creator, Black Music offers a space to learn, appreciate, and connect with the culture and community driving the soundtrack of today and tomorrow.</p>
     </div>
-    <div class="feature">
-      <h3>▶️ Audio & Video</h3>
-      <p>Enjoy music playback with immersive audio and video experiences.</p>
-    </div>
-    <div class="feature">
-      <h3>🌍 Multilingual</h3>
-      <p>Available in over 15 languages, making it accessible to music lovers everywhere.</p>
-    </div>
-    <div class="feature">
-      <h3>🔒 Privacy First</h3>
-      <p>Your data stays yours. We don’t collect personal information.</p>
+
+    <div class="features">
+      <div class="feature">
+        <h3>🌍 Explore Diverse Genres</h3>
+        <p>Journey through Africa, the Caribbean, and beyond — uncovering genres that define global sound.</p>
+      </div>
+      <div class="feature">
+        <h3>🎤 Learn About Icons</h3>
+        <p>Discover legendary artists, producers, and cultural movements shaping the past and future.</p>
+      </div>
+      <div class="feature">
+        <h3>✨ Celebrate Creativity</h3>
+        <p>Experience the stories and artistry behind every rhythm, melody, and beat.</p>
+      </div>
+      <div class="feature">
+        <h3>🎧 Stay Inspired</h3>
+        <p>Be part of the evolving sounds and movements that continue to influence the world’s music.</p>
+      </div>
     </div>
   </section>
 
@@ -63,7 +162,7 @@
     </div>
 
     <div class="device-section">
-      <h3>📱 iPad</h3>
+      <h3>💻 iPad</h3>
       <div class="device-images">
         <img width="200" alt="iPad Screenshot 1" src="images/2909e5b9-61fd-44e5-8e52-9bad64b24292.jpg" />
         <img width="200" alt="iPad Screenshot 2" src="images/71a597cc-689f-4442-b3c5-b75ae2c130c3.jpg" />
@@ -73,7 +172,10 @@
   </section>
 
   <footer>
+    <p>Join us in honoring the artists and communities that make Black music a timeless force.</p>
+    <p>Contact: <a href="mailto:appblackmusic@gmail.com">appblackmusic@gmail.com</a></p>
     <p>&copy; 2025 Black Music. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
