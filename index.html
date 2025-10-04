@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Black Music App</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -29,19 +29,13 @@
       color: #ccc;
       line-height: 1.6;
     }
-    .btn {
-      display: inline-block;
+    .store-badge img {
+      height: 60px;
       margin-top: 1.5rem;
-      padding: 0.9rem 1.8rem;
-      background: #ff6600;
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: background 0.3s;
+      transition: transform 0.2s ease-in-out;
     }
-    .btn:hover {
-      background: #e65c00;
+    .store-badge img:hover {
+      transform: scale(1.05);
     }
     section {
       padding: 3rem 2rem;
@@ -98,6 +92,7 @@
     .device-images img {
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      width: 200px;
     }
     footer {
       text-align: center;
@@ -120,7 +115,13 @@
   <header>
     <h1>Black Music</h1>
     <p>Celebrate the legacy, diversity, and global impact of Black music.</p>
-    <a href="https://apps.apple.com/us/app/black-music/id6636492722" class="btn">Download on App Store</a>
+
+    <!-- Official Apple Download Badge -->
+    <div class="store-badge">
+      <a href="https://apps.apple.com/us/app/black-music/id6636492722">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+      </a>
+    </div>
   </header>
 
   <section>
@@ -155,18 +156,18 @@
     <div class="device-section">
       <h3>📱 iPhone</h3>
       <div class="device-images">
-        <img width="200" alt="iPhone Screenshot 1" src="images/IMG_2666.jpg" />
-        <img width="200" alt="iPhone Screenshot 2" src="images/IMG_2668.jpg" />
-        <img width="200" alt="iPhone Screenshot 3" src="images/IMG_2667.jpg" />
+        <img src="https://github.com/user-attachments/assets/1ec44fe5-4042-4580-b425-365eb7883faf" alt="iPhone Screenshot 1" />
+        <img src="https://github.com/user-attachments/assets/b4fc4664-f1c5-432d-a52d-953231fa05a7" alt="iPhone Screenshot 2" />
+        <img src="https://github.com/user-attachments/assets/1f828dcc-b791-4243-863c-0f4bea06906f" alt="iPhone Screenshot 3" />
       </div>
     </div>
 
     <div class="device-section">
       <h3>💻 iPad</h3>
       <div class="device-images">
-        <img width="200" alt="iPad Screenshot 1" src="images/2909e5b9-61fd-44e5-8e52-9bad64b24292.jpg" />
-        <img width="200" alt="iPad Screenshot 2" src="images/71a597cc-689f-4442-b3c5-b75ae2c130c3.jpg" />
-        <img width="200" alt="iPad Screenshot 3" src="images/615ec32b-b120-4b34-99f2-82057fea3df3.jpg" />
+        <img src="https://github.com/user-attachments/assets/2909e5b9-61fd-44e5-8e52-9bad64b24292" alt="iPad Screenshot 1" />
+        <img src="https://github.com/user-attachments/assets/71a597cc-689f-4442-b3c5-b75ae2c130c3" alt="iPad Screenshot 2" />
+        <img src="https://github.com/user-attachments/assets/615ec32b-b120-4b34-99f2-82057fea3df3" alt="iPad Screenshot 3" />
       </div>
     </div>
   </section>
