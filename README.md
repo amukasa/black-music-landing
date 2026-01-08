@@ -1,1 +1,1 @@
-URL: file:///Users/amukasa/Desktop/black-music-landing/index.html
+https://amukasa.github.io/black-music-landing/
