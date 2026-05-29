@@ -3,150 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Afro Music App</title>
+  <title>Muka Music</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #0d0d0d;
       color: #fff;
+      line-height: 1.6;
     }
+
     header {
       background: linear-gradient(135deg, #000, #1a1a1a);
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
+
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin: 0;
       color: #ff6600;
     }
+
     header p {
-      max-width: 700px;
-      margin: 1rem auto;
+      max-width: 720px;
+      margin: 1.2rem auto 0;
       font-size: 1.1rem;
       color: #ccc;
-      line-height: 1.6;
     }
+
     .store-badge img {
       height: 60px;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       transition: transform 0.2s ease-in-out;
     }
+
     .store-badge img:hover {
       transform: scale(1.05);
     }
+
     section {
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
+
     section h2 {
       color: #ff6600;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     .description {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
       color: #ddd;
-      line-height: 1.7;
       font-size: 1.05rem;
     }
+
+    .description p {
+      margin-bottom: 1.5rem;
+    }
+
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
       margin-top: 3rem;
     }
+
     .feature {
       background: #1a1a1a;
       padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      transition: transform 0.2s ease;
     }
+
+    .feature:hover {
+      transform: translateY(-4px);
+    }
+
     .feature h3 {
       color: #ff6600;
       margin-top: 0;
+      margin-bottom: 1rem;
     }
+
     .feature p {
       color: #ccc;
-      line-height: 1.6;
+      margin: 0;
     }
+
     .screenshots {
       background: #141414;
     }
+
     .device-section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
+
     .device-section h3 {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: #fff;
+      font-size: 1.4rem;
     }
+
     .device-images {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.2rem;
     }
+
     .device-images img {
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      width: 200px;
+      width: 220px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      transition: transform 0.2s ease;
     }
+
+    .device-images img:hover {
+      transform: scale(1.03);
+    }
+
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
       background: #000;
       color: #888;
       font-size: 0.95rem;
     }
+
     footer a {
       color: #ff6600;
       text-decoration: none;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+
+      section {
+        padding: 3rem 1.5rem;
+      }
+
+      .device-images img {
+        width: 180px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
-    <h1>Afro Music</h1>
-    <p>Celebrate the legacy, diversity, and global impact of Afro music.</p>
+    <h1>Muka Music</h1>
 
-    <!-- Official Apple Download Badge -->
+    <p>
+      Discover and celebrate the rhythms, stories, and global influence of Afro music —
+      from Africa to the Caribbean and beyond.
+    </p>
+
+    <!-- App Store Badge -->
     <div class="store-badge">
-      <a href="https://apps.apple.com/us/app/black-music/id6636492722">
-        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+      <a href="https://apps.apple.com/us/app/black-music/id6636492722" target="_blank">
+        <img
+          src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+          alt="Download on the App Store"
+        >
       </a>
     </div>
   </header>
 
   <section>
+    <h2>About Muka Music</h2>
+
     <div class="description">
-      <p><strong>Afro Music</strong> is your dedicated platform to explore and honor the rich cultural heritage, vibrant sounds, and profound influence of Afro and Black music worldwide. From the heartbeats of Africa to the dynamic rhythms of the Caribbean, immerse yourself in the stories, creativity, and trailblazing artists who have shaped generations.</p>
-      <p>Discover the deep roots and powerful narratives behind the music that continues to inspire and move the world. Whether you’re a fan, student, or creator, Afro Music offers a space to learn, appreciate, and connect with the culture and community driving the soundtrack of today and tomorrow.</p>
+      <p>
+        <strong>Muka Music</strong> is a platform dedicated to showcasing the culture,
+        creativity, and impact of Afro music around the world. Explore the sounds,
+        stories, and movements that continue to shape generations and influence
+        global music culture.
+      </p>
+
+      <p>
+        From Afrobeats and Amapiano to reggae, dancehall, jazz, soul, and beyond,
+        Muka Music highlights the artists, communities, and histories behind the music.
+        Whether you are discovering new sounds or reconnecting with timeless classics,
+        Muka Music helps you stay inspired and connected.
+      </p>
     </div>
 
     <div class="features">
+
       <div class="feature">
-        <h3>🌍 Explore Diverse Genres</h3>
-        <p>Journey through Africa, the Caribbean, and beyond — uncovering genres that define global sound.</p>
+        <h3>🌍 Explore Global Sounds</h3>
+        <p>
+          Discover music genres and cultural movements from Africa,
+          the Caribbean, and across the diaspora.
+        </p>
       </div>
+
       <div class="feature">
-        <h3>🎤 Learn About Icons</h3>
-        <p>Discover legendary artists, producers, and cultural movements shaping the past and future.</p>
+        <h3>🎤 Learn About Artists</h3>
+        <p>
+          Explore legendary musicians, rising stars,
+          producers, and creative pioneers shaping modern music.
+        </p>
       </div>
+
       <div class="feature">
-        <h3>✨ Celebrate Creativity</h3>
-        <p>Experience the stories and artistry behind every rhythm, melody, and beat.</p>
+        <h3>✨ Celebrate Culture</h3>
+        <p>
+          Experience the stories, heritage, and creativity behind
+          every rhythm, lyric, and performance.
+        </p>
       </div>
+
       <div class="feature">
         <h3>🎧 Stay Inspired</h3>
-        <p>Be part of the evolving sounds and movements that continue to influence the world’s music.</p>
+        <p>
+          Keep up with evolving sounds and discover music that
+          continues to move audiences worldwide.
+        </p>
       </div>
+
     </div>
   </section>
 
@@ -155,6 +248,7 @@
 
     <div class="device-section">
       <h3>📱 iPhone</h3>
+
       <div class="device-images">
         <img src="images/iphone1.PNG" alt="iPhone Screenshot 1">
         <img src="images/iphone2.PNG" alt="iPhone Screenshot 2">
@@ -164,6 +258,7 @@
 
     <div class="device-section">
       <h3>💻 iPad</h3>
+
       <div class="device-images">
         <img src="images/ipad1.jpg" alt="iPad Screenshot 1">
         <img src="images/ipad2.jpg" alt="iPad Screenshot 2">
@@ -173,9 +268,19 @@
   </section>
 
   <footer>
-    <p>Join us in honoring the artists and communities that make Afro music a timeless force.</p>
-    <p>Contact: <a href="mailto:appblackmusic@gmail.com">appblackmusic@gmail.com</a></p>
-    <p>&copy; 2025 Afro Music. All rights reserved.</p>
+    <p>
+      Join us in celebrating the artists and communities
+      shaping the sound of today and tomorrow.
+    </p>
+
+    <p>
+      Contact:
+      <a href="mailto:appblackmusic@gmail.com">
+        appblackmusic@gmail.com
+      </a>
+    </p>
+
+    <p>&copy; 2025 Muka Music. All rights reserved.</p>
   </footer>
 
 </body>
