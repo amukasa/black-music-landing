@@ -1,1 +1,1 @@
-https://amukasa.github.io/black-music-landing/
+https://apps.apple.com/us/developer/arnold-mukasa/id1272883074
