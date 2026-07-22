@@ -1,203 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muka Music</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muka Music — Celebrate Afro Music & Culture</title>
   <style>
+    :root {
+      --bg-color: #0b0b0f;
+      --text-main: #f5f5f7;
+      --text-muted: #9e9e9e;
+      --accent-purple: #8e2de2;
+      --accent-gold: #f9d423;
+      --accent-gradient: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+    }
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
     }
 
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
+      overflow-x: hidden;
       line-height: 1.6;
     }
 
+    /* Radial glow background effects */
+    body::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(142, 45, 226, 0.15) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+
+    /* Header & Hero Section */
     header {
-      background: linear-gradient(135deg, #000, #1a1a1a);
-      padding: 4rem 2rem;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 2rem;
+      position: relative;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: #ff6600;
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff 30%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     header p {
-      max-width: 720px;
-      margin: 1.2rem auto 0;
-      font-size: 1.1rem;
-      color: #ccc;
+      font-size: 1.25rem;
+      max-width: 600px;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards;
     }
 
-    .store-badge img {
-      height: 60px;
-      margin-top: 2rem;
-      transition: transform 0.2s ease-in-out;
+    .badge-container {
+      animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
+      transition: transform 0.3s ease;
     }
 
-    .store-badge img:hover {
+    .badge-container:hover {
       transform: scale(1.05);
     }
 
+    .badge-container img {
+      height: 54px;
+      width: auto;
+    }
+
+    /* Main Sections Layout */
     section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    section h2 {
-      color: #ff6600;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .description {
-      max-width: 850px;
+      max-width: 1100px;
       margin: 0 auto;
-      color: #ddd;
-      font-size: 1.05rem;
+      padding: 6rem 2rem;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) perspective(1px);
     }
 
-    .description p {
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 4px;
+      background: var(--accent-purple);
+      margin: 0.75rem auto 0 auto;
+      border-radius: 2px;
+    }
+
+    /* About Section Description */
+    .about-intro {
+      max-width: 800px;
+      margin: 0 auto 4rem auto;
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+    }
+
+    .about-intro strong {
+      color: var(--text-main);
+    }
+
+    .about-intro p {
       margin-bottom: 1.5rem;
     }
 
-    .features {
+    /* Features Grid */
+    .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
+      gap: 1.5rem;
     }
 
-    .feature {
-      background: #1a1a1a;
-      padding: 2rem;
-      border-radius: 18px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      transition: transform 0.2s ease;
-    }
-
-    .feature:hover {
-      transform: translateY(-4px);
-    }
-
-    .feature h3 {
-      color: #ff6600;
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-
-    .feature p {
-      color: #ccc;
-      margin: 0;
-    }
-
-    .screenshots {
-      background: #141414;
-    }
-
-    .device-section {
-      margin-bottom: 3rem;
-    }
-
-    .device-section h3 {
-      margin-bottom: 1.5rem;
-      color: #fff;
-      font-size: 1.4rem;
-    }
-
-    .device-images {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-    }
-
-    .device-images img {
-      width: 220px;
-      border-radius: 18px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-      transition: transform 0.2s ease;
-    }
-
-    .device-images img:hover {
-      transform: scale(1.03);
-    }
-
-    footer {
-      text-align: center;
+    .grid-item {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       padding: 2.5rem 2rem;
-      background: #000;
-      color: #888;
+      border-radius: 20px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .grid-item:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(142, 45, 226, 0.4);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .grid-item h3 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .grid-item p {
+      color: var(--text-muted);
       font-size: 0.95rem;
     }
 
+    /* App Screenshots Section */
+    .screenshot-group {
+      margin-bottom: 4rem;
+    }
+
+    .screenshot-group h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+      padding-left: 0.5rem;
+    }
+
+    .screenshot-scroll {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 1rem 0.5rem 2rem 0.5rem;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none; /* Hide scrollbar Firefox */
+    }
+
+    .screenshot-scroll::-webkit-scrollbar {
+      display: none; /* Hide scrollbar Safari/Chrome */
+    }
+
+    .screenshot-scroll img {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      border-radius: 24px;
+      border: 4px solid var(--glass-border);
+      background-color: #000;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .screenshot-scroll img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 15px 40px rgba(142, 45, 226, 0.2);
+    }
+
+    /* Custom sizing matching device aspect ratios */
+    .iphone-scroller img {
+      height: 480px;
+      width: auto;
+    }
+
+    .ipad-scroller img {
+      height: 400px;
+      width: auto;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: rgba(0, 0, 0, 0.4);
+      border-top: 1px solid var(--glass-border);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin-bottom: 1rem;
+    }
+
+    footer p:first-child {
+      font-size: 1.15rem;
+      color: var(--text-main);
+      max-width: 500px;
+      margin: 0 auto 1.5rem auto;
+    }
+
     footer a {
-      color: #ff6600;
+      color: var(--text-main);
       text-decoration: none;
+      border-bottom: 1px dashed var(--accent-purple);
+      transition: color 0.2s;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: var(--accent-purple);
     }
 
+    /* Responsive adjustments */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.4rem;
-      }
-
-      section {
-        padding: 3rem 1.5rem;
-      }
-
-      .device-images img {
-        width: 180px;
-      }
+      header h1 { font-size: 2.75rem; }
+      header p { font-size: 1.1rem; }
+      section { padding: 4rem 1.5rem; }
+      .iphone-scroller img { height: 380px; }
+      .ipad-scroller img { height: 280px; }
     }
   </style>
 </head>
-
 <body>
 
   <header>
     <h1>Muka Music</h1>
-
     <p>
       Discover and celebrate the rhythms, stories, and global influence of Afro music —
       from Africa to the Caribbean and beyond.
     </p>
-
-    <!-- App Store Badge -->
-    <div class="store-badge">
+    <div class="badge-container">
       <a href="https://apps.apple.com/us/app/black-music/id6636492722" target="_blank">
-        <img
-          src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-          alt="Download on the App Store"
-        >
+        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83">
       </a>
     </div>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Muka Music</h2>
-
-    <div class="description">
+    <div class="about-intro">
       <p>
         <strong>Muka Music</strong> is a platform dedicated to showcasing the culture,
         creativity, and impact of Afro music around the world. Explore the sounds,
         stories, and movements that continue to shape generations and influence
         global music culture.
       </p>
-
       <p>
         From Afrobeats and Amapiano to reggae, dancehall, jazz, soul, and beyond,
         Muka Music highlights the artists, communities, and histories behind the music.
@@ -206,81 +317,55 @@
       </p>
     </div>
 
-    <div class="features">
-
-      <div class="feature">
+    <div class="grid-container">
+      <div class="grid-item">
         <h3>🌍 Explore Global Sounds</h3>
-        <p>
-          Discover music genres and cultural movements from Africa,
-          the Caribbean, and across the diaspora.
-        </p>
+        <p>Discover music genres and cultural movements from Africa, the Caribbean, and across the diaspora.</p>
       </div>
 
-      <div class="feature">
+      <div class="grid-item">
         <h3>🎤 Learn About Artists</h3>
-        <p>
-          Explore legendary musicians, rising stars,
-          producers, and creative pioneers shaping modern music.
-        </p>
+        <p>Explore legendary musicians, rising stars, producers, and creative pioneers shaping modern music.</p>
       </div>
 
-      <div class="feature">
+      <div class="grid-item">
         <h3>✨ Celebrate Culture</h3>
-        <p>
-          Experience the stories, heritage, and creativity behind
-          every rhythm, lyric, and performance.
-        </p>
+        <p>Experience the stories, heritage, and creativity behind every rhythm, lyric, and performance.</p>
       </div>
 
-      <div class="feature">
+      <div class="grid-item">
         <h3>🎧 Stay Inspired</h3>
-        <p>
-          Keep up with evolving sounds and discover music that
-          continues to move audiences worldwide.
-        </p>
+        <p>Keep up with evolving sounds and discover music that continues to move audiences worldwide.</p>
       </div>
-
     </div>
   </section>
 
-  <section class="screenshots">
+  <section id="screenshots">
     <h2>App Screenshots</h2>
 
-    <div class="device-section">
+    <div class="screenshot-group">
       <h3>📱 iPhone</h3>
-
-      <div class="device-images">
-        <img src="images/iphone1.jpg" alt="iPhone Screenshot 1">
-        <img src="images/iphone2.jpg" alt="iPhone Screenshot 2">
-        <img src="images/iphone3.jpg" alt="iPhone Screenshot 3">
+      <div class="screenshot-scroll iphone-scroller">
+        <img alt="iPhone Screenshot 1" src="images/iphone1.jpg">
+        <img alt="iPhone Screenshot 2" src="images/iphone2.jpg">
+        <img alt="iPhone Screenshot 3" src="images/iphone3.jpg">
       </div>
     </div>
 
-    <div class="device-section">
+    <div class="screenshot-group">
       <h3>💻 iPad</h3>
-
-      <div class="device-images">
-        <img src="images/ipad1.png" alt="iPad Screenshot 1">
-        <img src="images/ipad2.png" alt="iPad Screenshot 2">
-        <img src="images/ipad3.jpg" alt="iPad Screenshot 3">
+      <div class="screenshot-scroll ipad-scroller">
+        <img alt="iPad Screenshot 1" src="images/ipad1.png">
+        <img alt="iPad Screenshot 2" src="images/ipad2.png">
+        <img alt="iPad Screenshot 3" src="images/ipad3.jpg">
       </div>
     </div>
   </section>
 
   <footer>
-    <p>
-      Join us in celebrating the artists and communities
-      shaping the sound of today and tomorrow.
-    </p>
-
-    <p>
-      Contact:
-      <a href="mailto:appblackmusic@gmail.com">
-        appblackmusic@gmail.com
-      </a>
-    </p>
-
-    <p>&copy; 2025 Muka Music. All rights reserved.</p>
+    <p>Join us in celebrating the artists and communities shaping the sound of today and tomorrow.</p>
+    <p>Contact: <a href="mailto:mukamusicapp@gmail.com">appblackmusic@gmail.com</a></p>
+    <p>&copy; 2026 Muka Music. All rights reserved.</p>
   </footer>
 
 </body>
