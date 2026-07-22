@@ -59,11 +59,6 @@
       }
     }
 
-    @keyframes pulseGlow {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.05); opacity: 1; }
-    }
-
     /* Header & Hero Section */
     header {
       min-height: 85vh;
@@ -89,7 +84,7 @@
 
     header p {
       font-size: 1.25rem;
-      max-width: 600px;
+      max-width: 680px;
       color: var(--text-muted);
       margin-bottom: 2.5rem;
       animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards;
@@ -113,7 +108,7 @@
     section {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 6rem 2rem;
+      padding: 5rem 2rem;
       animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) perspective(1px);
     }
 
@@ -156,7 +151,7 @@
     /* Features Grid */
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
@@ -178,8 +173,8 @@
     }
 
     .grid-item h3 {
-      font-size: 1.35rem;
-      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
       color: var(--text-main);
       display: flex;
       align-items: center;
@@ -189,6 +184,19 @@
     .grid-item p {
       color: var(--text-muted);
       font-size: 0.95rem;
+    }
+
+    /* Notice Banner */
+    .notice-box {
+      max-width: 800px;
+      margin: 3rem auto 0 auto;
+      padding: 1rem 1.5rem;
+      background: rgba(142, 45, 226, 0.08);
+      border: 1px solid rgba(142, 45, 226, 0.2);
+      border-radius: 12px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
 
     /* App Screenshots Section */
@@ -254,7 +262,7 @@
     }
 
     footer p {
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     footer p:first-child {
@@ -275,11 +283,16 @@
       color: var(--accent-purple);
     }
 
+    .footer-links {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       header h1 { font-size: 2.75rem; }
       header p { font-size: 1.1rem; }
-      section { padding: 4rem 1.5rem; }
+      section { padding: 3rem 1.5rem; }
       .iphone-scroller img { height: 380px; }
       .ipad-scroller img { height: 280px; }
     }
@@ -290,8 +303,8 @@
   <header>
     <h1>Muka Music</h1>
     <p>
-      Discover and celebrate the rhythms, stories, and global influence of Afro music —
-      from Africa to the Caribbean and beyond.
+      Navigate authentic regional sounds from across Africa and the Caribbean with Muka Music —
+      your ultimate guide to global music.
     </p>
     <div class="badge-container">
       <a href="https://apps.apple.com/us/app/black-music/id6636492722" target="_blank">
@@ -304,39 +317,47 @@
     <h2>About Muka Music</h2>
     <div class="about-intro">
       <p>
-        <strong>Muka Music</strong> is a platform dedicated to showcasing the culture,
-        creativity, and impact of Afro music around the world. Explore the sounds,
-        stories, and movements that continue to shape generations and influence
-        global music culture.
-      </p>
-      <p>
-        From Afrobeats and Amapiano to reggae, dancehall, jazz, soul, and beyond,
-        Muka Music highlights the artists, communities, and histories behind the music.
-        Whether you are discovering new sounds or reconnecting with timeless classics,
-        Muka Music helps you stay inspired and connected.
+        Navigate authentic regional sounds from across Africa and the Caribbean with Muka Music.
+        Serving as your ultimate guide to global music, Muka bypasses generic algorithms with expert curation
+        and seamless Apple Music integration — making it effortless to uncover hidden gems and curate your perfect personal library.
       </p>
     </div>
 
+    <h2>Key Features</h2>
     <div class="grid-container">
       <div class="grid-item">
-        <h3>🌍 Explore Global Sounds</h3>
-        <p>Discover music genres and cultural movements from Africa, the Caribbean, and across the diaspora.</p>
+        <h3>🎯 Expert Curation</h3>
+        <p>Access exclusive playlists highlighting legendary icons and the next big stars.</p>
       </div>
 
       <div class="grid-item">
-        <h3>🎤 Learn About Artists</h3>
-        <p>Explore legendary musicians, rising stars, producers, and creative pioneers shaping modern music.</p>
+        <h3>🔍 Deep Discovery</h3>
+        <p>Uncover hidden gems and explore the rich stories behind the tracks you love.</p>
       </div>
 
       <div class="grid-item">
-        <h3>✨ Celebrate Culture</h3>
-        <p>Experience the stories, heritage, and creativity behind every rhythm, lyric, and performance.</p>
+        <h3>🎵 Music Recognition</h3>
+        <p>Identify any song around you and instantly save it to your custom Muka-curated Apple Music playlists.</p>
       </div>
 
       <div class="grid-item">
-        <h3>🎧 Stay Inspired</h3>
-        <p>Keep up with evolving sounds and discover music that continues to move audiences worldwide.</p>
+        <h3>📱 Seamless Access</h3>
+        <p>Add custom Home Screen widgets for one-tap access to your favorite sounds.</p>
       </div>
+
+      <div class="grid-item">
+        <h3>🎨 Elevated Design</h3>
+        <p>Enjoy a beautiful, intuitive interface built specifically for music lovers.</p>
+      </div>
+
+      <div class="grid-item">
+        <h3>⚙️ Your Music, Your Way</h3>
+        <p>Personalize your experience with settings tailored to your listening habits.</p>
+      </div>
+    </div>
+
+    <div class="notice-box">
+      <strong>Note:</strong> A subscription is required to access all content and features.
     </div>
   </section>
 
@@ -364,7 +385,11 @@
 
   <footer>
     <p>Join us in celebrating the artists and communities shaping the sound of today and tomorrow.</p>
-    <p>Contact: <a href="mailto:mukamusicapp@gmail.com">appblackmusic@gmail.com</a></p>
+    <p>Contact: <a href="mailto:mukamusicapp@gmail.com">mukamusicapp@gmail.com</a></p>
+    <div class="footer-links">
+      <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a></p>
+    </div>
+    <br>
     <p>&copy; 2026 Muka Music. All rights reserved.</p>
   </footer>
 
